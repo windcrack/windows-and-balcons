@@ -1,0 +1,50 @@
+footer{
+    height: 307px;
+    background-color: #27AE60;
+    padding-top: 65px;
+}
+
+.footer-logo{
+    margin-bottom: 30px;
+}
+
+.contact-footer{
+    &-phone, &-email{
+       &_link{
+            color: #000;
+            text-decoration: none;
+            margin-left: 4px;
+       }
+    }
+    &-phone{
+        margin-bottom: 17px;
+    }
+}
+
+.nav{
+    &-lists{
+        color: #fff;
+    }
+    &-item{
+        &_link{
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+
+.social{
+    margin-right: 95px;
+    &-items{
+        display: flex;
+    }
+    &-item{
+        list-style: none;
+        margin-right: 11px;
+        margin-bottom: 21px;
+        img{
+            width: 21px;
+            height: 21px;
+        }
+    }
+}

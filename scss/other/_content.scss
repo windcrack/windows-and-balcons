@@ -1,0 +1,23 @@
+main{
+    width: 1110px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    width: 1110px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    // border: solid 1px red;
+    &_around{
+        justify-content: space-around;
+    }
+    &_center{
+        justify-content: center;
+    }
+    &_between{
+        justify-content: space-between;
+    }
+}

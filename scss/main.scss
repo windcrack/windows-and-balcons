@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+img{
+    max-width: 100%;
+}
+.shadow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 467px;
+    background: rgba(0, 0, 0, 0.26);
+}
+
+.ancor{
+    transition: .7s all;
+}
+
+.hide{
+    display: none;
+}
+
+.show-flex{
+    display: flex;
+}
+ 
+.title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    &_margin49{
+        margin: 49px 0 29px;
+    }
+    &_margin29{
+        margin: 29px 0 70px;
+    }
+}
+
+.toTop{
+    position: sticky;
+    bottom: 10px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #27AE60;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 12px;
+    margin-left: auto;
+}
+ 
+.button{
+    border-radius: 5px;
+    // height: 33px;
+    padding: 10px 9px;
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    min-width: 160px;
+    cursor: pointer;
+    transition: 0.7s all;
+    text-decoration: none;
+    // color
+    &_grey{
+        background-color: #AABBBD;
+    }
+    &_green{
+        background-color: #27AE60;
+    }
+    // width
+    &_160{
+        width: 160px;
+    }
+    &_214{
+        width: 214px;
+    }
+    &_172{
+        width: 172px;
+    }
+    &_147{
+        width: 147px;
+    }
+    &_255{
+        width: 255px;
+    }
+    &_349{
+        width: 349px;
+    }
+    // height
+    &_56{
+        min-height: 36px;
+    }
+    &_mLeft{
+        margin-right: 29px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &_auto-left{
+        margin-left: auto;
+    }
+    span{
+        margin: auto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    // отступы
+    &_left-and-right{
+        margin: 0 28px;
+    }
+    // наведение
+    &_hover{
+        &:hover{
+            color: #000;
+            background-color: #fff;
+        }
+    }
+
+    &_hover-next{
+        &:hover{
+            padding: 12px 12px;
+            -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.5);
+            -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.5);
+            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.5);
+        }
+    }
+    
+    &_active{
+        color: #000;
+        background-color: #fff;
+    }
+}
+
+.close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: .7s all;
+    &:hover{
+        transform: rotate(360deg);
+    }
+}
+ 
+// @import 'header', 'content', 'about', 'slide', 'balconAndLodg'; 
+@import 'other/header', 'other/content', 'other/about', 'other/slide', 'other/balconAndLodgi', 'other/calck', 'other/footer', 'other/modal';
+@import 'other/balconPage';
+
+.map-frame{
+    margin: 80px 0 30px;
+    iframe{
+        width: 100%;
+        height: 431px;
+        border:0;
+    }
+}
