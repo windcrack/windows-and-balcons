@@ -103,7 +103,7 @@ img {
   margin-left: auto;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 1500px) {
   .toTop {
     z-index: 10000;
   }
@@ -294,6 +294,12 @@ nav {
   padding: 0;
 }
 
+@media (max-width: 450px) {
+  .logo {
+    margin: auto;
+  }
+}
+
 .contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -304,6 +310,12 @@ nav {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+@media (max-width: 450px) {
+  .contact {
+    margin: auto;
+  }
 }
 
 .contact .contact-phone {
@@ -1324,6 +1336,19 @@ footer {
   color: #fff;
 }
 
+@media (max-width: 1130px) {
+  .slide-balcon-text {
+    left: 42px;
+  }
+}
+
+@media (max-width: 720px) {
+  .slide-balcon-text {
+    left: 16px;
+    top: 6px;
+  }
+}
+
 .slide-balcon-title {
   font-style: normal;
   font-weight: 500;
@@ -1332,6 +1357,26 @@ footer {
   width: 541px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 50px;
+}
+
+@media (max-width: 1130px) {
+  .slide-balcon-title {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 720px) {
+  .slide-balcon-title {
+    width: auto;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 450px) {
+  .slide-balcon-title {
+    line-height: 26px;
+  }
 }
 
 .slide-balcon-descr {
@@ -1343,8 +1388,40 @@ footer {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+@media (max-width: 1130px) {
+  .slide-balcon-descr {
+    width: 570px;
+  }
+}
+
+@media (max-width: 720px) {
+  .slide-balcon-descr {
+    width: 365px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 450px) {
+  .slide-balcon-descr {
+    width: auto;
+    margin-right: 10px;
+    line-height: 24px;
+  }
+}
+
 .balcon-img {
   position: relative;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+@media (max-width: 720px) {
+  .balcon-img {
+    min-width: 100%;
+    min-height: 100%;
+  }
 }
 
 .balcon-min {
@@ -1357,9 +1434,33 @@ footer {
   margin-right: 30px;
 }
 
+@media (max-width: 1130px) {
+  .balcon-min .swiper-slide {
+    width: 150px !important;
+    height: 150px;
+  }
+}
+
+@media (max-width: 720px) {
+  .balcon-min .swiper-slide {
+    width: 94px !important;
+    margin-right: 8px;
+    height: 50px;
+  }
+}
+
 .balcon-min img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (max-width: 720px) {
+  .balcon-min img {
+    -o-object-fit: fill;
+       object-fit: fill;
+    min-width: 100%;
+    min-height: 100%;
+  }
 }
 
 .balcon-descr {
@@ -1373,9 +1474,43 @@ footer {
   margin-bottom: 33px;
 }
 
+@media (max-width: 1130px) {
+  .balcon-descr {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 720px) {
+  .balcon-descr {
+    margin-bottom: 11px;
+  }
+}
+
 .balcon-descr-text {
   width: 634px;
   margin-right: 30px;
+}
+
+@media (max-width: 1130px) {
+  .balcon-descr-text {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 720px) {
+  .balcon-descr-text {
+    width: 400px;
+  }
+}
+
+@media (max-width: 450px) {
+  .balcon-descr-text {
+    width: auto;
+    margin-right: 0;
+  }
 }
 
 .inside-descr {
@@ -1385,9 +1520,26 @@ footer {
   margin-bottom: 33px;
 }
 
+@media (max-width: 1130px) {
+  .inside-descr {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 11px;
+  }
+}
+
 .inside-descr-text {
   width: 634px;
   margin-left: 30px;
+}
+
+@media (max-width: 1130px) {
+  .inside-descr-text {
+    width: auto;
+    margin: 12px 0 0;
+  }
 }
 
 .map-frame {

@@ -89,7 +89,7 @@ img {
   margin-left: auto;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 1500px) {
   .toTop {
     z-index: 10000;
   }

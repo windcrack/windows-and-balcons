@@ -19,10 +19,22 @@ nav {
   padding: 0;
 }
 
+@media (max-width: 450px) {
+  .logo {
+    margin: auto;
+  }
+}
+
 .contact {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+@media (max-width: 450px) {
+  .contact {
+    margin: auto;
+  }
 }
 
 .contact .contact-phone {

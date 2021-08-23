@@ -17,20 +17,20 @@ const swiper = new Swiper('.swiper-container', {
 });
 const swiperBalconMin = new Swiper('.balcon-min',{
     direction: 'horizontal',
-    slidesPerView: 1,
+    slidesPerView: 4,
     freeMode: false,
     loop: false,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
 })
 
-// const swiperBalcon = new Swiper('.swiper-container', {
-//     direction: 'horizontal',
-//     loop: false,
-//     thumbs:{
-//         swiper: swiperBalconMin,
-//     }
-// });
+const swiperBalcon = new Swiper('.swiper-container', {
+    direction: 'horizontal',
+    loop: false,
+    thumbs:{
+        swiper: swiperBalconMin,
+    }
+});
 
 modal('.button_green', '.close');
 modal('.modal_call', '.close');

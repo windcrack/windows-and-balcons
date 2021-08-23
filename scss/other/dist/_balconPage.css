@@ -15,6 +15,19 @@
   color: #fff;
 }
 
+@media (max-width: 1130px) {
+  .slide-balcon-text {
+    left: 42px;
+  }
+}
+
+@media (max-width: 720px) {
+  .slide-balcon-text {
+    left: 16px;
+    top: 6px;
+  }
+}
+
 .slide-balcon-title {
   font-style: normal;
   font-weight: 500;
@@ -23,6 +36,26 @@
   width: 541px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 50px;
+}
+
+@media (max-width: 1130px) {
+  .slide-balcon-title {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 720px) {
+  .slide-balcon-title {
+    width: auto;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 450px) {
+  .slide-balcon-title {
+    line-height: 26px;
+  }
 }
 
 .slide-balcon-descr {
@@ -34,8 +67,38 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+@media (max-width: 1130px) {
+  .slide-balcon-descr {
+    width: 570px;
+  }
+}
+
+@media (max-width: 720px) {
+  .slide-balcon-descr {
+    width: 365px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 450px) {
+  .slide-balcon-descr {
+    width: auto;
+    margin-right: 10px;
+    line-height: 24px;
+  }
+}
+
 .balcon-img {
   position: relative;
+  min-width: fit-content;
+}
+
+@media (max-width: 720px) {
+  .balcon-img {
+    min-width: 100%;
+    min-height: 100%;
+  }
 }
 
 .balcon-min {
@@ -48,8 +111,31 @@
   margin-right: 30px;
 }
 
+@media (max-width: 1130px) {
+  .balcon-min .swiper-slide {
+    width: 150px !important;
+    height: 150px;
+  }
+}
+
+@media (max-width: 720px) {
+  .balcon-min .swiper-slide {
+    width: 94px !important;
+    margin-right: 8px;
+    height: 50px;
+  }
+}
+
 .balcon-min img {
   object-fit: cover;
+}
+
+@media (max-width: 720px) {
+  .balcon-min img {
+    object-fit: fill;
+    min-width: 100%;
+    min-height: 100%;
+  }
 }
 
 .balcon-descr {
@@ -58,9 +144,40 @@
   margin-bottom: 33px;
 }
 
+@media (max-width: 1130px) {
+  .balcon-descr {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 720px) {
+  .balcon-descr {
+    margin-bottom: 11px;
+  }
+}
+
 .balcon-descr-text {
   width: 634px;
   margin-right: 30px;
+}
+
+@media (max-width: 1130px) {
+  .balcon-descr-text {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 720px) {
+  .balcon-descr-text {
+    width: 400px;
+  }
+}
+
+@media (max-width: 450px) {
+  .balcon-descr-text {
+    width: auto;
+    margin-right: 0;
+  }
 }
 
 .inside-descr {
@@ -68,9 +185,23 @@
   margin-bottom: 33px;
 }
 
+@media (max-width: 1130px) {
+  .inside-descr {
+    flex-direction: column;
+    margin-bottom: 11px;
+  }
+}
+
 .inside-descr-text {
   width: 634px;
   margin-left: 30px;
+}
+
+@media (max-width: 1130px) {
+  .inside-descr-text {
+    width: auto;
+    margin: 12px 0 0;
+  }
 }
 
 /*# sourceMappingURL=_balconPage.css.map */

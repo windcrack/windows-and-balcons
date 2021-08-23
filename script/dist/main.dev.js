@@ -24,19 +24,19 @@ var swiper = new _swiperBundleEsmBrowserMin["default"]('.swiper-container', {
 });
 var swiperBalconMin = new _swiperBundleEsmBrowserMin["default"]('.balcon-min', {
   direction: 'horizontal',
-  slidesPerView: 1,
+  slidesPerView: 4,
   freeMode: false,
   loop: false,
   watchSlidesVisibility: true,
   watchSlidesProgress: true
-}); // const swiperBalcon = new Swiper('.swiper-container', {
-//     direction: 'horizontal',
-//     loop: false,
-//     thumbs:{
-//         swiper: swiperBalconMin,
-//     }
-// });
-
+});
+var swiperBalcon = new _swiperBundleEsmBrowserMin["default"]('.swiper-container', {
+  direction: 'horizontal',
+  loop: false,
+  thumbs: {
+    swiper: swiperBalconMin
+  }
+});
 (0, _modal["default"])('.button_green', '.close');
 (0, _modal["default"])('.modal_call', '.close');
 (0, _modal["default"])('.modal_call_ring', '.close');

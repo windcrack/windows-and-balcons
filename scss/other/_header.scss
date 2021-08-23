@@ -17,11 +17,17 @@ nav{
 .logo{
     margin: 0;
     padding: 0;
+    @media (max-width: 450px) {
+        margin: auto;
+    }
 }
 .contact{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    @media (max-width: 450px) {
+        margin: auto;
+    }
     .contact-phone{
         text-align: right;
     }
