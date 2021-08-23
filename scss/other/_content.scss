@@ -6,6 +6,12 @@ main{
     @media (max-width: 1130px) {
         width: 700px;
     }
+    @media (max-width: 720px) {
+        width: 400px;
+    }
+    @media (max-width: 450px) {
+        width: 325px;
+    }
 }
 
 .container{
@@ -15,7 +21,8 @@ main{
     flex-direction: row;
     // border: solid 1px red;
     @media (max-width: 1130px) {
-        
+        width: auto;
+        margin: 0 40px;
     }
     &_around{
         justify-content: space-around;
@@ -25,5 +32,8 @@ main{
     }
     &_between{
         justify-content: space-between;
+        @media (max-width: 885px) {
+            flex-wrap: wrap;
+        }
     }
 }

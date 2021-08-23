@@ -1,15 +1,25 @@
 .swiper-slide{
     display: flex;
     justify-content: center;
+    @media (max-width: 1130px) {
+        flex-direction: column !important;
+    }
 }
 
 .slide-img{
     width: 349px;
     height: 296px;
+    @media (max-width: 1130px) {
+        margin: 0 auto 12px;
+    }
 }
 
 .slide-text{
     margin-left: 30px;
+    @media (max-width: 1130px) {
+        max-width: 500px;
+        margin: auto;
+    }
 }
 
 .swiper-button-prev,
@@ -19,6 +29,9 @@
     &::after{
         content: '' !important;
         font-family: none !important;
+    }
+    @media (max-width: 600px) {
+        display: none !important;
     }
 }
 
@@ -31,7 +44,6 @@
 .swiper-pagination-bullet{
     width: 15px !important;
     height: 15px !important;
-    // background: #27AE60 !important;
     background: none !important;
     border: 5px solid #27AE60;
     box-sizing: border-box;

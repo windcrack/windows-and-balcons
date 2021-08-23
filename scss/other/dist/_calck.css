@@ -3,6 +3,12 @@
   grid-template: "a b" "c d";
 }
 
+@media (max-width: 1130px) {
+  .calck-body {
+    grid-template: "a a" "c c" "b d";
+  }
+}
+
 .calck-oject {
   grid-area: a;
 }
@@ -12,6 +18,13 @@
   display: flex;
   flex-direction: column;
   grid-area: c;
+}
+
+@media (max-width: 1130px) {
+  .calck-type-window {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
 }
 
 .calck-dimensions {
@@ -27,6 +40,12 @@
 .object-items {
   list-style: none;
   display: flex;
+}
+
+@media (max-width: 720px) {
+  .object-items {
+    flex-wrap: wrap;
+  }
 }
 
 input[type="radio"] {
@@ -55,6 +74,22 @@ input[type="radio"]:checked + label img {
   margin: 0;
 }
 
+@media (max-width: 755px) {
+  .object-item {
+    margin: 0;
+  }
+  .object-item label {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 720px) {
+  .object-item {
+    flex-basis: 50%;
+  }
+}
+
 .border {
   border: 1px #27AE60 solid;
 }
@@ -64,6 +99,13 @@ input[type="radio"]:checked + label img {
   font-size: 24px;
   line-height: 28px;
   margin-bottom: 35px;
+}
+
+@media (max-width: 720px) {
+  .calck-title {
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
 }
 
 .object-item-img {
@@ -77,6 +119,19 @@ input[type="radio"]:checked + label img {
   align-items: center;
 }
 
+@media (max-width: 755px) {
+  .object-item-img {
+    width: 100px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .object-item-img {
+    width: 158px;
+  }
+}
+
 .object-item-name {
   font-style: normal;
   font-weight: normal;
@@ -86,12 +141,37 @@ input[type="radio"]:checked + label img {
   text-align: center;
 }
 
+@media (max-width: 755px) {
+  .object-item-name {
+    font-size: 24px;
+  }
+}
+
 .windows {
   display: flex;
 }
 
+@media (max-width: 720px) {
+  .windows {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 .window-select {
   margin-right: 30px;
+}
+
+@media (max-width: 775px) {
+  .window-select {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 720px) {
+  .window-select {
+    margin-bottom: 12px;
+  }
 }
 
 .window-select:last-child {

@@ -32,4 +32,10 @@
   margin-bottom: auto;
 }
 
+@media (max-width: 1130px) {
+  .about .about-descr_text {
+    margin-bottom: 12px;
+  }
+}
+
 /*# sourceMappingURL=_about.css.map */

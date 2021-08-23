@@ -1,0 +1,106 @@
+.installation {
+  display: grid;
+  grid-template: "a c" 52% "b c" 40% "b d" 40px;
+  justify-items: center;
+}
+
+@media (max-width: 1130px) {
+  .installation {
+    grid-template: "a a" "b b" "c c" "d d";
+  }
+}
+
+@media (max-width: 600px) {
+  .installation {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.installation-img {
+  position: relative;
+}
+
+.installation-arrow {
+  position: absolute;
+  bottom: 50px;
+  left: 29px;
+  cursor: pointer;
+}
+
+.balcon, .lodgie, .inside {
+  position: relative;
+}
+
+@media (max-width: 1130px) {
+  .balcon, .lodgie, .inside {
+    margin-bottom: 24px;
+  }
+}
+
+.balcon {
+  grid-area: a;
+  flex-basis: 50%;
+}
+
+.lodgie {
+  grid-area: b;
+}
+
+.inside {
+  grid-area: c;
+}
+
+.for-grid {
+  margin: auto 0 33px;
+  grid-area: d;
+}
+
+@media (max-width: 600px) {
+  .for-grid {
+    margin: auto;
+  }
+}
+
+.balcon,
+.lodgie {
+  width: 544px;
+  height: 444px;
+}
+
+.inside {
+  width: 540px;
+  height: 779px;
+}
+
+.balcon, .lodgie, .inside {
+  width: 100%;
+  height: 100%;
+}
+
+.balcon-title,
+.lodgie-title,
+.inside-title {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  position: absolute;
+  top: 41px;
+  left: 29px;
+}
+
+.balcon-title {
+  color: #27AE60;
+  text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+}
+
+.lodgie-title {
+  color: #013220;
+}
+
+.inside-title {
+  color: #013220;
+  max-width: 279px;
+}
+
+/*# sourceMappingURL=_balconAndLodgi.css.map */

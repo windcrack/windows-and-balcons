@@ -82,6 +82,12 @@ img {
   text-decoration: none;
 }
 
+@media (max-width: 885px) {
+  .button {
+    min-width: 0;
+  }
+}
+
 .button_grey {
   background-color: #AABBBD;
 }
@@ -128,6 +134,26 @@ img {
 
 .button_auto-left {
   margin-left: auto;
+}
+
+@media (max-width: 1130px) {
+  .button_auto-left {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 885px) {
+  .button_hide-text-mob {
+    width: 33px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button_hide-text-mob span {
+    display: none;
+  }
 }
 
 .button span {
@@ -185,7 +211,7 @@ nav {
   margin-top: 22px;
   position: sticky;
   top: 0;
-  z-index: 10000000;
+  z-index: 10000;
 }
 
 .logo {
@@ -218,11 +244,24 @@ main {
   flex-direction: column;
 }
 
+@media (max-width: 1130px) {
+  main {
+    width: 700px;
+  }
+}
+
 .container {
   width: 1110px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+}
+
+@media (max-width: 1130px) {
+  .container {
+    width: auto;
+    margin: 0 40px;
+  }
 }
 
 .container_around {
@@ -241,10 +280,24 @@ main {
   display: flex;
 }
 
+@media (max-width: 1130px) {
+  .about {
+    flex-direction: column;
+  }
+}
+
 .about .about-img {
   width: 443px;
   height: 398px;
   margin-right: 30px;
+}
+
+@media (max-width: 1130px) {
+  .about .about-img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+  }
 }
 
 .about .about-descr {
@@ -257,9 +310,21 @@ main {
   margin-bottom: auto;
 }
 
+@media (max-width: 1130px) {
+  .about .about-descr_text {
+    margin-bottom: 12px;
+  }
+}
+
 .swiper-slide {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 1130px) {
+  .swiper-slide {
+    flex-direction: column !important;
+  }
 }
 
 .slide-img {
@@ -267,8 +332,21 @@ main {
   height: 296px;
 }
 
+@media (max-width: 1130px) {
+  .slide-img {
+    margin: 0 auto 12px;
+  }
+}
+
 .slide-text {
   margin-left: 30px;
+}
+
+@media (max-width: 1130px) {
+  .slide-text {
+    max-width: 500px;
+    margin: auto;
+  }
 }
 
 .swiper-button-prev,
@@ -338,6 +416,12 @@ main {
   justify-items: center;
 }
 
+@media (max-width: 1130px) {
+  .installation {
+    grid-template: "a a" "b b" "c c" "d d";
+  }
+}
+
 .installation-img {
   position: relative;
 }
@@ -351,6 +435,12 @@ main {
 
 .balcon, .lodgie, .inside {
   position: relative;
+}
+
+@media (max-width: 1130px) {
+  .balcon, .lodgie, .inside {
+    margin-bottom: 24px;
+  }
 }
 
 .balcon {
@@ -412,6 +502,12 @@ main {
   grid-template: "a b" "c d";
 }
 
+@media (max-width: 1130px) {
+  .calck-body {
+    grid-template: "a a" "c c" "b d";
+  }
+}
+
 .calck-oject {
   grid-area: a;
 }
@@ -421,6 +517,13 @@ main {
   display: flex;
   flex-direction: column;
   grid-area: c;
+}
+
+@media (max-width: 1130px) {
+  .calck-type-window {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
 }
 
 .calck-dimensions {
@@ -589,6 +692,13 @@ footer {
   margin-right: 95px;
 }
 
+@media (max-width: 1130px) {
+  .social {
+    margin-left: 30px;
+    margin-right: 0;
+  }
+}
+
 .social-items {
   display: flex;
 }
@@ -606,15 +716,14 @@ footer {
 
 .modal-bg {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1000000;
+  z-index: 100000;
 }
 
 .modal-body {
@@ -623,6 +732,13 @@ footer {
   border-radius: 5px;
   padding: 35px 0 32px;
   position: relative;
+  z-index: 1000000;
+}
+
+@media (max-width: 1500px) {
+  .modal-body {
+    width: 495px;
+  }
 }
 
 .modal-body form {
@@ -646,10 +762,23 @@ footer {
   margin: 0 auto 12px;
 }
 
+@media (max-width: 1500px) {
+  .modal-details {
+    width: 440px;
+    margin-bottom: 6px;
+  }
+}
+
 .modal-details .house, .modal-details .street, .modal-details .apport {
   display: flex;
   flex-direction: column;
   width: 255px;
+}
+
+@media (max-width: 1500px) {
+  .modal-details .house, .modal-details .street, .modal-details .apport {
+    width: auto;
+  }
 }
 
 .modal-details .house-input, .modal-details .street-input, .modal-details .apport-input {
@@ -658,6 +787,12 @@ footer {
   margin: 0 0 12px;
   border-radius: 20px;
   color: #27AE60;
+}
+
+@media (max-width: 1500px) {
+  .modal-details .house-input, .modal-details .street-input, .modal-details .apport-input {
+    padding: 10px 10px;
+  }
 }
 
 .modal-details .sreet {
@@ -680,12 +815,24 @@ footer {
   margin: auto;
 }
 
+@media (max-width: 1500px) {
+  .modal-inputs {
+    width: 440px;
+  }
+}
+
 .modal-input, .modal-textarea {
   border: 2px solid #000;
   padding: 15px 15px;
   margin: 0 0 12px;
   border-radius: 20px;
   color: #27AE60;
+}
+
+@media (max-width: 1500px) {
+  .modal-input, .modal-textarea {
+    padding: 10px 10px;
+  }
 }
 
 .modal-label {
@@ -695,6 +842,12 @@ footer {
 .modal-textarea {
   resize: none;
   height: 120px;
+}
+
+@media (max-width: 1500px) {
+  .modal-textarea {
+    height: 60px;
+  }
 }
 
 .slider-balcon-body {

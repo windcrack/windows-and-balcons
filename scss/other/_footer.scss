@@ -35,6 +35,17 @@ footer{
 
 .social{
     margin-right: 95px;
+    @media (max-width: 1130px) {
+        margin-left: 30px;
+        margin-right: 0;
+    }
+    @media (max-width: 885px) {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 24px;
+        margin-left: 0;
+    }
     &-items{
         display: flex;
     }
@@ -42,6 +53,12 @@ footer{
         list-style: none;
         margin-right: 11px;
         margin-bottom: 21px;
+        @media (max-width: 885px) {
+            margin-bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         img{
             width: 21px;
             height: 21px;

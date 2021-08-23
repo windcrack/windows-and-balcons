@@ -19,6 +19,9 @@
         flex-direction: column;
         &_text{
             margin-bottom: auto;
+            @media (max-width: 1130px) {
+                margin-bottom: 12px;
+            }
         }
     }
 }

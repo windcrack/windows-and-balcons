@@ -3,6 +3,9 @@
     grid-template: 
     "a b"
     "c d";
+    @media (max-width: 1130px) {
+        grid-template: "a a" "c c" "b d";
+    }
 }
 
 .calck-oject{
@@ -14,6 +17,10 @@
     display: flex;
     flex-direction: column;
     grid-area: c;
+    @media (max-width: 1130px) {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
 }
 
 .calck-dimensions{
@@ -29,6 +36,9 @@
 .object-items{
     list-style: none;
     display: flex;
+    @media (max-width: 720px) {
+        flex-wrap: wrap;
+    }
 }
 
 input[type="radio"]{
@@ -49,12 +59,22 @@ input[type="radio"]{
     height: 115px;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     align-items: center;
     box-sizing: border-box;
     &:last-child{
         margin: 0;
     }
+    @media (max-width: 755px) {
+        margin: 0;
+        label{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    @media (max-width: 720px) {
+        flex-basis: 50%;
+    }
+    
 }
 .border{
     border: 1px #27AE60 solid;
@@ -65,6 +85,10 @@ input[type="radio"]{
     font-size: 24px;
     line-height: 28px;
     margin-bottom: 35px;
+    @media (max-width: 720px) {
+        margin-bottom: 18px;
+        font-size: 18px;
+    }
 }
 
 .object-item-img{
@@ -76,6 +100,13 @@ input[type="radio"]{
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 755px) {
+        width: 100px;
+        margin: auto;
+    }
+    @media (max-width: 720px) {
+        width: 158px;
+    }
 }
 
 .object-item-name{
@@ -85,14 +116,27 @@ input[type="radio"]{
     line-height: 28px;
     margin-top: auto;
     text-align: center;
+    @media (max-width: 755px) {
+        font-size: 24px;
+    }
 }
 
 .windows{
     display: flex;
+    @media (max-width: 720px) {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
 
 .window-select{
     margin-right: 30px;
+    @media (max-width: 775px) {
+        margin-right: 10px;
+    }
+    @media (max-width: 720px) {
+        margin-bottom: 12px;
+    }
     &:last-child{
         margin: 0;
     }
@@ -106,7 +150,6 @@ input[type="radio"]{
 
 .calck-dimensions{
     max-width: 296px;
-    
 }
 
 .dimensions-inputs{

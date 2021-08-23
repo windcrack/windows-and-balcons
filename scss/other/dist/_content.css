@@ -11,11 +11,30 @@ main {
   }
 }
 
+@media (max-width: 720px) {
+  main {
+    width: 400px;
+  }
+}
+
+@media (max-width: 450px) {
+  main {
+    width: 325px;
+  }
+}
+
 .container {
   width: 1110px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+}
+
+@media (max-width: 1130px) {
+  .container {
+    width: auto;
+    margin: 0 40px;
+  }
 }
 
 .container_around {
@@ -28,6 +47,12 @@ main {
 
 .container_between {
   justify-content: space-between;
+}
+
+@media (max-width: 885px) {
+  .container_between {
+    flex-wrap: wrap;
+  }
 }
 
 /*# sourceMappingURL=_content.css.map */
