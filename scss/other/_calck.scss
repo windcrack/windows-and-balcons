@@ -6,6 +6,9 @@
     @media (max-width: 1130px) {
         grid-template: "a a" "c c" "b d";
     }
+    @media (max-width: 450px) {
+        grid-template: "a" "c" "b" "d";
+    }
 }
 
 .calck-oject{
@@ -27,10 +30,17 @@
     display: flex;
     flex-direction: column;
     grid-area: b;
+    @media (max-width: 450px) {
+        margin: auto;
+    }
 }
 
 .calck-summ{
     grid-area: d;
+    @media (max-width: 450px) {
+        margin: auto;
+        text-align: center;
+    }
 }
 
 .object-items{
@@ -38,6 +48,9 @@
     display: flex;
     @media (max-width: 720px) {
         flex-wrap: wrap;
+    }
+    @media (max-width: 450px) {
+        flex-direction: column;
     }
 }
 
@@ -63,6 +76,9 @@ input[type="radio"]{
     box-sizing: border-box;
     &:last-child{
         margin: 0;
+        @media (max-width: 450px) {
+            margin: auto;
+        }
     }
     @media (max-width: 755px) {
         margin: 0;
@@ -73,6 +89,10 @@ input[type="radio"]{
     }
     @media (max-width: 720px) {
         flex-basis: 50%;
+    }
+    @media (max-width: 450px) {
+        flex-direction: 100%;
+        margin: auto;
     }
     
 }
@@ -127,6 +147,9 @@ input[type="radio"]{
         flex-wrap: wrap;
         justify-content: space-between;
     }
+    @media (max-width: 450px) {
+        flex-direction: column;
+    }
 }
 
 .window-select{
@@ -137,8 +160,14 @@ input[type="radio"]{
     @media (max-width: 720px) {
         margin-bottom: 12px;
     }
+    @media (max-width: 450px) {
+        margin: auto;
+    }
     &:last-child{
         margin: 0;
+        @media (max-width: 450px) {
+            margin: auto;
+        }
     }
     img{
         filter: grayscale(100%) opacity(50%);

@@ -26,6 +26,9 @@ img{
 
 .ancor{
     padding-top: 30px;
+    @media (max-width: 450px) {
+        padding-top: 15px;
+    }
 }
 
 .hide{
@@ -43,9 +46,16 @@ img{
     line-height: 56px;
     &_margin49{
         margin: 49px 0 29px;
+        @media (max-width: 450px) {
+            margin: 18px 0 8px;
+            font-size: 32px;
+        }
     }
     &_margin29{
         margin: 29px 0 70px;
+        @media (max-width: 450px) {
+            margin: 18px 0 20px;
+        }
     }
 }
 
@@ -63,6 +73,9 @@ img{
     text-decoration: none;
     margin-bottom: 12px;
     margin-left: auto;
+    @media (max-width: 450px) {
+        z-index: 10000;
+    }
 }
  
 .button{
@@ -101,9 +114,15 @@ img{
     }
     &_255{
         width: 255px;
+        @media (max-width: 450px) {
+            margin: auto;
+        }
     }
     &_349{
         width: 349px;
+        @media (max-width: 450px) {
+            width: 90%;
+        }
     }
     // height
     &_56{
@@ -118,8 +137,10 @@ img{
     &_auto-left{
         margin-left: auto;
         @media (max-width: 1130px) {
-            margin-right: auto;
-            margin-left: 0; 
+            margin: 12px auto 0 0;
+        }
+        @media (max-width: 450px) {
+            margin: 12px auto 0;
         }
     }
     &_hide-text-mob{

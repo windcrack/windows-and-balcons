@@ -36,6 +36,12 @@ img {
   padding-top: 30px;
 }
 
+@media (max-width: 450px) {
+  .ancor {
+    padding-top: 15px;
+  }
+}
+
 .hide {
   display: none;
 }
@@ -57,8 +63,21 @@ img {
   margin: 49px 0 29px;
 }
 
+@media (max-width: 450px) {
+  .title_margin49 {
+    margin: 18px 0 8px;
+    font-size: 32px;
+  }
+}
+
 .title_margin29 {
   margin: 29px 0 70px;
+}
+
+@media (max-width: 450px) {
+  .title_margin29 {
+    margin: 18px 0 20px;
+  }
 }
 
 .toTop {
@@ -82,6 +101,12 @@ img {
   text-decoration: none;
   margin-bottom: 12px;
   margin-left: auto;
+}
+
+@media (max-width: 450px) {
+  .toTop {
+    z-index: 10000;
+  }
 }
 
 .button {
@@ -135,8 +160,20 @@ img {
   width: 255px;
 }
 
+@media (max-width: 450px) {
+  .button_255 {
+    margin: auto;
+  }
+}
+
 .button_349 {
   width: 349px;
+}
+
+@media (max-width: 450px) {
+  .button_349 {
+    width: 90%;
+  }
 }
 
 .button_56 {
@@ -157,8 +194,13 @@ img {
 
 @media (max-width: 1130px) {
   .button_auto-left {
-    margin-right: auto;
-    margin-left: 0;
+    margin: 12px auto 0 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .button_auto-left {
+    margin: 12px auto 0;
   }
 }
 
@@ -633,6 +675,12 @@ main {
   }
 }
 
+@media (max-width: 450px) {
+  .calck-body {
+    grid-template: "a" "c" "b" "d";
+  }
+}
+
 .calck-oject {
   grid-area: a;
 }
@@ -667,8 +715,21 @@ main {
   grid-area: b;
 }
 
+@media (max-width: 450px) {
+  .calck-dimensions {
+    margin: auto;
+  }
+}
+
 .calck-summ {
   grid-area: d;
+}
+
+@media (max-width: 450px) {
+  .calck-summ {
+    margin: auto;
+    text-align: center;
+  }
 }
 
 .object-items {
@@ -682,6 +743,15 @@ main {
   .object-items {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 450px) {
+  .object-items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -720,6 +790,12 @@ input[type="radio"]:checked + label img {
   margin: 0;
 }
 
+@media (max-width: 450px) {
+  .object-item:last-child {
+    margin: auto;
+  }
+}
+
 @media (max-width: 755px) {
   .object-item {
     margin: 0;
@@ -739,6 +815,16 @@ input[type="radio"]:checked + label img {
   .object-item {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  .object-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: 100%;
+            flex-direction: 100%;
+    margin: auto;
   }
 }
 
@@ -821,6 +907,15 @@ input[type="radio"]:checked + label img {
   }
 }
 
+@media (max-width: 450px) {
+  .windows {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .window-select {
   margin-right: 30px;
 }
@@ -837,8 +932,20 @@ input[type="radio"]:checked + label img {
   }
 }
 
+@media (max-width: 450px) {
+  .window-select {
+    margin: auto;
+  }
+}
+
 .window-select:last-child {
   margin: 0;
+}
+
+@media (max-width: 450px) {
+  .window-select:last-child {
+    margin: auto;
+  }
 }
 
 .window-select img {
@@ -904,8 +1011,26 @@ footer {
   padding-top: 65px;
 }
 
+@media (max-width: 450px) {
+  footer {
+    padding-top: 12px;
+  }
+}
+
 .footer-logo {
   margin-bottom: 30px;
+}
+
+@media (max-width: 450px) {
+  .footer-logo {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 450px) {
+  .info-block {
+    margin: auto;
+  }
 }
 
 .contact-footer-phone_link, .contact-footer-email_link {
@@ -918,8 +1043,26 @@ footer {
   margin-bottom: 17px;
 }
 
+@media (max-width: 450px) {
+  .contact-footer-phone {
+    margin-bottom: 6px;
+  }
+}
+
 .nav-lists {
   color: #fff;
+}
+
+@media (max-width: 450px) {
+  .nav-lists {
+    margin: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .nav-items {
+    margin-right: 3rem;
+  }
 }
 
 .nav-item_link {
@@ -953,10 +1096,26 @@ footer {
   }
 }
 
+@media (max-width: 450px) {
+  .social {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 6px;
+  }
+}
+
 .social-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 450px) {
+  .social-items {
+    margin: auto;
+  }
 }
 
 .social-item {
