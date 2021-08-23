@@ -25,7 +25,7 @@ img{
 }
 
 .ancor{
-    transition: .7s all;
+    padding-top: 30px;
 }
 
 .hide{
@@ -51,8 +51,7 @@ img{
 
 .toTop{
     position: sticky;
-    bottom: 10px;
-    right: 20px;
+    inset: 0 20px 10px 0;
     width: 50px;
     height: 50px;
     background: #27AE60;

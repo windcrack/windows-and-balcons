@@ -33,8 +33,7 @@ img {
 }
 
 .ancor {
-  -webkit-transition: .7s all;
-  transition: .7s all;
+  padding-top: 30px;
 }
 
 .hide {
@@ -65,8 +64,7 @@ img {
 .toTop {
   position: -webkit-sticky;
   position: sticky;
-  bottom: 10px;
-  right: 20px;
+  inset: 0 20px 10px 0;
   width: 50px;
   height: 50px;
   background: #27AE60;
@@ -214,6 +212,7 @@ nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 10000;
 }
 
 .logo {
@@ -257,6 +256,12 @@ main {
           flex-direction: column;
 }
 
+@media (max-width: 1130px) {
+  main {
+    width: 700px;
+  }
+}
+
 .container {
   width: 1110px;
   margin: 0 auto;
@@ -292,10 +297,27 @@ main {
   display: flex;
 }
 
+@media (max-width: 1130px) {
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .about .about-img {
   width: 443px;
   height: 398px;
   margin-right: 30px;
+}
+
+@media (max-width: 1130px) {
+  .about .about-img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+  }
 }
 
 .about .about-descr {
@@ -710,8 +732,7 @@ footer {
 
 .modal-bg {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
@@ -725,7 +746,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 1000000;
+  z-index: 100000;
 }
 
 .modal-body {
@@ -734,6 +755,13 @@ footer {
   border-radius: 5px;
   padding: 35px 0 32px;
   position: relative;
+  z-index: 1000000;
+}
+
+@media (max-width: 1500px) {
+  .modal-body {
+    width: 495px;
+  }
 }
 
 .modal-body form {
@@ -763,6 +791,13 @@ footer {
   margin: 0 auto 12px;
 }
 
+@media (max-width: 1500px) {
+  .modal-details {
+    width: 440px;
+    margin-bottom: 6px;
+  }
+}
+
 .modal-details .house, .modal-details .street, .modal-details .apport {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -774,12 +809,24 @@ footer {
   width: 255px;
 }
 
+@media (max-width: 1500px) {
+  .modal-details .house, .modal-details .street, .modal-details .apport {
+    width: auto;
+  }
+}
+
 .modal-details .house-input, .modal-details .street-input, .modal-details .apport-input {
   border: 2px solid #000;
   padding: 15px 15px;
   margin: 0 0 12px;
   border-radius: 20px;
   color: #27AE60;
+}
+
+@media (max-width: 1500px) {
+  .modal-details .house-input, .modal-details .street-input, .modal-details .apport-input {
+    padding: 10px 10px;
+  }
 }
 
 .modal-details .sreet {
@@ -807,12 +854,24 @@ footer {
   margin: auto;
 }
 
+@media (max-width: 1500px) {
+  .modal-inputs {
+    width: 440px;
+  }
+}
+
 .modal-input, .modal-textarea {
   border: 2px solid #000;
   padding: 15px 15px;
   margin: 0 0 12px;
   border-radius: 20px;
   color: #27AE60;
+}
+
+@media (max-width: 1500px) {
+  .modal-input, .modal-textarea {
+    padding: 10px 10px;
+  }
 }
 
 .modal-label {
@@ -822,6 +881,12 @@ footer {
 .modal-textarea {
   resize: none;
   height: 120px;
+}
+
+@media (max-width: 1500px) {
+  .modal-textarea {
+    height: 60px;
+  }
 }
 
 .slider-balcon-body {
