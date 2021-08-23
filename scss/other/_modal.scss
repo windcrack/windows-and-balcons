@@ -22,6 +22,11 @@
             width: 495px;
         }
 
+        @media (max-width: 450px) {
+            width: 325px;
+            padding: 0 12px 14px;
+        }
+
         form{
             display: flex;
             flex-direction: column;
@@ -34,6 +39,10 @@
         font-size: 48px;
         line-height: 56px;
         margin: 0 0 35px;
+        @media (max-width: 450px) {
+            font-size: 36px;
+            margin: 0 0 18px;
+        }
     }
     &-details{
         display: grid;
@@ -45,6 +54,11 @@
         @media (max-width: 1500px) {
             width: 440px;
             margin-bottom: 6px;
+        }
+        @media (max-width: 450px) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
         }
         .house, .street, .apport{
             display: flex;
@@ -70,6 +84,9 @@
         .house{
             grid-area: b;
             margin-left: 30px;
+            @media (max-width: 450px) {
+                margin: 0;
+            }
         }
         .apport{
             grid-area: c;
@@ -82,6 +99,9 @@
         margin: auto;
         @media (max-width: 1500px) {
             width: 440px;
+        }
+        @media (max-width: 450px) {
+            width: 100%;
         }
     }
     &-input, &-textarea{

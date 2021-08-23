@@ -1190,6 +1190,13 @@ footer {
   }
 }
 
+@media (max-width: 450px) {
+  .modal-body {
+    width: 325px;
+    padding: 0 12px 14px;
+  }
+}
+
 .modal-body form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1209,6 +1216,13 @@ footer {
   margin: 0 0 35px;
 }
 
+@media (max-width: 450px) {
+  .modal-title {
+    font-size: 36px;
+    margin: 0 0 18px;
+  }
+}
+
 .modal-details {
   display: -ms-grid;
   display: grid;
@@ -1221,6 +1235,19 @@ footer {
   .modal-details {
     width: 440px;
     margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 450px) {
+  .modal-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
   }
 }
 
@@ -1264,6 +1291,12 @@ footer {
   margin-left: 30px;
 }
 
+@media (max-width: 450px) {
+  .modal-details .house {
+    margin: 0;
+  }
+}
+
 .modal-details .apport {
   grid-area: c;
 }
@@ -1283,6 +1316,12 @@ footer {
 @media (max-width: 1500px) {
   .modal-inputs {
     width: 440px;
+  }
+}
+
+@media (max-width: 450px) {
+  .modal-inputs {
+    width: 100%;
   }
 }
 

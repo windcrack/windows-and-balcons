@@ -1,7 +1,7 @@
 function modal(open, close){
-    const callButton = document.querySelector(open);
+    // const callButton = document.querySelector(open);
     const closeButton = document.querySelector(close);
-    callButton.addEventListener('click', openModal);
+    open.addEventListener('click', openModal);
     closeButton.addEventListener('click', closeModal);
 }
 

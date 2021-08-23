@@ -6,9 +6,9 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 
 function modal(open, close) {
-  var callButton = document.querySelector(open);
+  // const callButton = document.querySelector(open);
   var closeButton = document.querySelector(close);
-  callButton.addEventListener('click', openModal);
+  open.addEventListener('click', openModal);
   closeButton.addEventListener('click', closeModal);
 }
 

@@ -3,6 +3,8 @@ import modal from './modal.js';
 import closeModalBg from './closeBg.js';
 import calc from './calc.js';
 
+const modalCall = document.querySelectorAll('.modal-call'),
+      body = document.querySelector('body');
 const swiper = new Swiper('.swiper-container', {
     direction: 'horizontal',
     loop: false,
@@ -24,16 +26,24 @@ const swiperBalconMin = new Swiper('.balcon-min',{
     watchSlidesProgress: true,
 })
 
-const swiperBalcon = new Swiper('.swiper-container', {
-    direction: 'horizontal',
-    loop: false,
-    thumbs:{
-        swiper: swiperBalconMin,
+function checkClassSlider(){
+    if(body.classList.contains('swiper-container')){
+        const swiperBalcon = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: false,
+            thumbs:{
+                swiper: swiperBalconMin,
+            }
+        });
+    }else{
+        return;
     }
-});
+}
 
-modal('.button_green', '.close');
-modal('.modal_call', '.close');
-modal('.modal_call_ring', '.close');
+checkClassSlider();
+modalCall.forEach(btn => {
+    // console.log(btn);
+    modal(btn, '.close');
+})
 closeModalBg('.modal-bg');
 calc();

@@ -10,6 +10,8 @@ var _calc = _interopRequireDefault(require("./calc.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+var modalCall = document.querySelectorAll('.modal-call'),
+    body = document.querySelector('body');
 var swiper = new _swiperBundleEsmBrowserMin["default"]('.swiper-container', {
   direction: 'horizontal',
   loop: false,
@@ -30,16 +32,26 @@ var swiperBalconMin = new _swiperBundleEsmBrowserMin["default"]('.balcon-min', {
   watchSlidesVisibility: true,
   watchSlidesProgress: true
 });
-var swiperBalcon = new _swiperBundleEsmBrowserMin["default"]('.swiper-container', {
-  direction: 'horizontal',
-  loop: false,
-  thumbs: {
-    swiper: swiperBalconMin
+
+function checkClassSlider() {
+  if (body.classList.contains('swiper-container')) {
+    var swiperBalcon = new _swiperBundleEsmBrowserMin["default"]('.swiper-container', {
+      direction: 'horizontal',
+      loop: false,
+      thumbs: {
+        swiper: swiperBalconMin
+      }
+    });
+  } else {
+    return;
   }
+}
+
+checkClassSlider();
+modalCall.forEach(function (btn) {
+  // console.log(btn);
+  (0, _modal["default"])(btn, '.close');
 });
-(0, _modal["default"])('.button_green', '.close');
-(0, _modal["default"])('.modal_call', '.close');
-(0, _modal["default"])('.modal_call_ring', '.close');
 (0, _closeBg["default"])('.modal-bg');
 (0, _calc["default"])();
 //# sourceMappingURL=main.dev.js.map
