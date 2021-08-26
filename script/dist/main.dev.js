@@ -13,7 +13,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var modalCall = document.querySelectorAll('.modal-call'),
     body = document.querySelector('body');
 var swiper = new _swiperBundleEsmBrowserMin["default"]('.swiper-container', {
-  direction: 'horizontal',
+  slidesPerView: 'auto',
   loop: false,
   navigation: {
     nextEl: '.swiper-button-next',
@@ -24,32 +24,24 @@ var swiper = new _swiperBundleEsmBrowserMin["default"]('.swiper-container', {
     type: 'bullets'
   }
 });
-var swiperBalconMin = new _swiperBundleEsmBrowserMin["default"]('.balcon-min', {
-  direction: 'horizontal',
+var swiperBalconMin = new _swiperBundleEsmBrowserMin["default"]('.balcon-min-slider', {
   slidesPerView: 4,
+  slidesPerGroup: 1,
   freeMode: false,
   loop: false,
   watchSlidesVisibility: true,
-  watchSlidesProgress: true
+  watchSlidesProgress: true,
+  spaceBetween: 30
 });
-
-function checkClassSlider() {
-  if (body.classList.contains('swiper-container')) {
-    var swiperBalcon = new _swiperBundleEsmBrowserMin["default"]('.swiper-container', {
-      direction: 'horizontal',
-      loop: false,
-      thumbs: {
-        swiper: swiperBalconMin
-      }
-    });
-  } else {
-    return;
+var swiperBalcon = new _swiperBundleEsmBrowserMin["default"]('.balcon-slider', {
+  loop: false,
+  // spaceBetween: 5,
+  thumbs: {
+    swiper: swiperBalconMin
   }
-}
+}); // checkClassSlider();
 
-checkClassSlider();
 modalCall.forEach(function (btn) {
-  // console.log(btn);
   (0, _modal["default"])(btn, '.close');
 });
 (0, _closeBg["default"])('.modal-bg');

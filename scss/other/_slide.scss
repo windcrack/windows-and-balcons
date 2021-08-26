@@ -1,3 +1,9 @@
+.slider-body{
+    max-width: 1100px;
+    overflow: hidden;
+    position: relative;
+}
+
 .swiper-slide{
     display: flex;
     justify-content: center;
@@ -26,6 +32,7 @@
 .swiper-button-next{
     width: 40px !important;
     height: 54px !important;
+    top: 40% !important;
     &::after{
         content: '' !important;
         font-family: none !important;
@@ -80,4 +87,9 @@
     line-height: 21px;
     margin-top: 25px;
     margin-left: 1.3rem;
+}
+
+.slider-balcon-body{
+    max-width: 1100px;
+    overflow: hidden;
 }

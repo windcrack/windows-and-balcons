@@ -340,6 +340,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-width: 0;
 }
 
 @media (max-width: 1130px) {
@@ -453,6 +454,12 @@ main {
   }
 }
 
+.slider-body {
+  max-width: 1100px;
+  overflow: hidden;
+  position: relative;
+}
+
 .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -497,6 +504,7 @@ main {
 .swiper-button-next {
   width: 40px !important;
   height: 54px !important;
+  top: 40% !important;
 }
 
 .swiper-button-prev::after,
@@ -561,6 +569,11 @@ main {
   line-height: 21px;
   margin-top: 25px;
   margin-left: 1.3rem;
+}
+
+.slider-balcon-body {
+  max-width: 1100px;
+  overflow: hidden;
 }
 
 .installation {
@@ -1463,38 +1476,37 @@ footer {
   }
 }
 
-.balcon-min {
+.balcon-min-slider {
   margin-top: 29px;
 }
 
-.balcon-min .swiper-slide {
+.balcon-min-slider .swiper-slide {
   width: 255px !important;
   height: 223px;
-  margin-right: 30px;
 }
 
 @media (max-width: 1130px) {
-  .balcon-min .swiper-slide {
+  .balcon-min-slider .swiper-slide {
     width: 150px !important;
     height: 150px;
   }
 }
 
 @media (max-width: 720px) {
-  .balcon-min .swiper-slide {
+  .balcon-min-slider .swiper-slide {
     width: 94px !important;
     margin-right: 8px;
     height: 50px;
   }
 }
 
-.balcon-min img {
+.balcon-min-slider img {
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 @media (max-width: 720px) {
-  .balcon-min img {
+  .balcon-min-slider img {
     -o-object-fit: fill;
        object-fit: fill;
     min-width: 100%;
