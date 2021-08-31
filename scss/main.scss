@@ -35,6 +35,10 @@ img{
     display: none;
 }
 
+.show{
+    display: block;
+}
+
 .show-flex{
     display: flex;
 }
@@ -88,6 +92,7 @@ img{
     cursor: pointer;
     transition: 0.7s all;
     text-decoration: none;
+    border: none;
     @media (max-width: 885px) {
         min-width: 0;
     }
@@ -127,21 +132,6 @@ img{
     &_56{
         min-height: 36px;
     }
-    &_mLeft{
-        margin-right: 29px;
-        &:last-child{
-            margin-right: 0;
-        }
-    }
-    &_auto-left{
-        margin-left: auto;
-        @media (max-width: 1130px) {
-            margin: 12px auto 0 0;
-        }
-        @media (max-width: 450px) {
-            margin: 12px auto 0;
-        }
-    }
     &_hide-text-mob{
         @media (max-width: 885px) {
             span{
@@ -165,6 +155,29 @@ img{
     // отступы
     &_left-and-right{
         margin: 0 28px;
+    }
+    &_mLeft{
+        margin-right: 29px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &_auto-left{
+        margin-left: auto;
+        @media (max-width: 1130px) {
+            margin: 12px auto 0 0;
+        }
+        @media (max-width: 450px) {
+            margin: 12px auto 0;
+        }
+    }
+    &_center{
+        margin: 0 auto;
+    }
+    &_disabled{
+        &:disabled{
+            opacity: .7;
+        }
     }
     // наведение
     &_hover{

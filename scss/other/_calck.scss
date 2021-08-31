@@ -1,25 +1,20 @@
 .calck-body{
-    display: grid;
-    grid-template: 
-    "a b"
-    "c d";
-    @media (max-width: 1130px) {
-        grid-template: "a a" "c c" "b d";
-    }
-    @media (max-width: 450px) {
-        grid-template: "a" "c" "b" "d";
-    }
+    display: flex;
+    flex-direction: column;
 }
 
 .calck-oject{
-    grid-area: a;
+    display: block;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .calck-type-window{
     margin-top: 29px;
-    display: flex;
+    display: none;
     flex-direction: column;
-    grid-area: c;
+    flex-wrap: wrap;
     @media (max-width: 1130px) {
         margin-top: 12px;
         margin-bottom: 12px;
@@ -27,25 +22,34 @@
 }
 
 .calck-dimensions{
-    display: flex;
+    display: none;
     flex-direction: column;
-    grid-area: b;
+    flex-wrap: wrap;
     @media (max-width: 450px) {
         margin: auto;
     }
 }
 
 .calck-summ{
-    grid-area: d;
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
     @media (max-width: 450px) {
         margin: auto;
         text-align: center;
     }
 }
 
+.calck-form{
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 .object-items{
     list-style: none;
     display: flex;
+    margin-bottom: 24px;
     @media (max-width: 720px) {
         flex-wrap: wrap;
     }
@@ -57,19 +61,19 @@
 input[type="radio"]{
     display: none;
     &:checked + .radio{
-        border: 1px #27AE60 solid;
+        border: 2px #27AE60 solid;
+        -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.5);
+        -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.5);
+        box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.5);
     }
-    &:checked + label{
-        img{
-            filter: grayscale(0%) opacity(100%);
-        }
-    }
+}
+
+.radio{
+    transition: 0.7s box-shadow;
 }
 
 .object-item{
     margin-right: 30px;
-    width: 158px;
-    height: 115px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,11 +116,6 @@ input[type="radio"]{
 }
 
 .object-item-img{
-    width: 158px;
-    height: 59px;
-    background-color: rgba(196, 196, 196, 0.5);
-    color: #27AE60;
-    font-size: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,8 +140,16 @@ input[type="radio"]{
     }
 }
 
-.windows{
+.windows, .dimensions-inputs, .calck-summ-lists, .calck-body-form{
+    background: #AABBBD;
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    height: 300px;
+    padding: 30px;
+    margin-bottom: 24px;
+    border-radius: 5px;
     @media (max-width: 720px) {
         flex-wrap: wrap;
         justify-content: space-between;
@@ -153,7 +160,7 @@ input[type="radio"]{
 }
 
 .window-select{
-    margin-right: 30px;
+    display: flex;
     @media (max-width: 775px) {
         margin-right: 10px;
     }
@@ -169,36 +176,42 @@ input[type="radio"]{
             margin: auto;
         }
     }
-    img{
-        filter: grayscale(100%) opacity(50%);
-    }
-    input{
-        display: none;
-    }
 }
 
-.calck-dimensions{
-    max-width: 296px;
-}
-
-.dimensions-inputs{
+.window-name{
+    background: #fff;
+    padding: 20px;
+    width: 300px;
+    max-height: 20px;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    cursor: pointer;
+    border-radius: 5px;
+    box-sizing: border-box;
+    &::before{
+        content: '';
+        border: 1px solid #000;
+        border-radius: 3px;
+        width: 10px;
+        height: 10px;
+        margin-right: 24px;
+    }
+}
+
+input[type="checkbox"], .summ-value{
+    display: none;
+    &:checked + .window-name{
+        border: 2px solid #27AE60;
+        &::before{
+            background-color: #27AE60;
+            border: 1px solid #27AE60;
+        }
+    }
+}
+.dimensions-inputs{
     span{
         margin-left: 4px;
     }
-}
-
-.dimensions-windth,
-.dimensions-height{
-    background-color: none;
-    border: 2px solid #000000;
-    box-sizing: border-box;
-    border-radius: 20px;
-    padding: 6px;
-    margin-bottom: 15px;
-    flex-basis: 75%;
 }
 
 .summ-total{
@@ -214,4 +227,56 @@ input[type="radio"]{
 
 .summ-descr{
     margin-bottom: 12px;
+}
+
+.calck-body-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.calc-inputs{
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    margin: 0 auto;
+}
+
+.calc-input{
+    display: flex;
+    flex-direction: column;
+    input{
+        padding: 10px;
+        border: 1px solid #000;
+        border-radius: 20px;
+        margin-bottom: 12px;
+        outline:none;
+        &:focus, &:active{
+            border: none;
+        }
+    }
+}
+.calc-input-name{
+    margin-bottom: 12px;
+}
+
+.calc-footer{
+    display: flex;
+    align-items: center;
+}
+
+.step-info{
+    font-size: 28px;
+    flex-basis: 50%;
+    width: 50%;
+}
+
+.number-start{
+    color: #000;
+    &_last{
+        color: #27AE60;
+    }
+}
+.number-all{
+    color: #27AE60;
 }

@@ -156,91 +156,175 @@
         <h2 class="title title_margin49">Предварительный рассчет</h2>
         <div class="calck-body">
             <div class="calck-oject">
-                <h3 class="calck-title">Выберите тип объекта: </h3>
+                <h3 class="calck-title">Выберете, что хотите остеклить</h3>
                 <ul class="object-items">
                     <li class="object-item">
-                        <input class="oject-value" type="radio" name="object" id="balcon" value="1200">
+                        <input class="oject-value" type="radio" name="object" id="balcon">
                         <label class="radio" for="balcon">
                             <div class="object-item-img">
-                                <i class="fas fa-store"></i>
-                            </div>
-                            <p class="object-item-name">Балкон</p>
-                        </label>   
-                    </li>
-                    <li class="object-item">
-                        <input class="oject-value" type="radio" name="object" id="lodgies" value="1000">
-                        <label class="radio" for="lodgies">
-                            <div class="object-item-img">
-                                <i class="fas fa-table"></i>
+                                <img src="img/calck/lodgies.jpeg" alt="Лоджии">
                             </div>
                             <p class="object-item-name">Лоджия</p>
-                        </label>  
+                        </label>
                     </li>
                     <li class="object-item">
-                        <input class="oject-value" type="radio" name="object" id="house" value="1700">
+                        <input class="oject-value" type="radio" name="object" id="lodgies">
+                        <label class="radio" for="lodgies">
+                            <div class="object-item-img">
+                                <img src="img/calck/balcon.jpeg" alt="Балкон">
+                            </div>
+                            <p class="object-item-name">Балкон</p>
+                        </label>
+                    </li>
+                    <li class="object-item">
+                        <input class="oject-value" type="radio" name="object" id="house">
                         <label class="radio" for="house">
                             <div class="object-item-img">
-                                <i class="fas fa-home"></i>
-                            </div>
-                            <p class="object-item-name">Дом</p>
-                        </label> 
-                    </li>
-                    <li class="object-item">
-                        <input class="oject-value" type="radio" name="object" id="inside" value="1100">
-                        <label class="radio" for="inside">
-                            <div class="object-item-img">
-                                <i class="fas fa-home"></i>
+                                <img src="img/calck/otdelka.jpeg" alt="Внутренняя отделка">
                             </div>
                             <p class="object-item-name">Внутренняя отделка</p>
-                        </label>   
+                        </label>
+                    </li>
+                    <li class="object-item">
+                        <input class="oject-value" type="radio" name="object" id="balcon-block">
+                        <label class="radio" for="balcon-block">
+                            <div class="object-item-img">
+                                <img src="img/calck/balkonnyj-blok.jpeg" alt="Балконный блок">
+                            </div>
+                            <p class="object-item-name">Балконный блок</p>
+                        </label>
                     </li>
                 </ul>
+                <div class="calc-footer">
+                    <div class="step-info">
+                        <p class="step-info-numbers"><span class="step-info number-start">1</span> / <span class="step-info number-all">4</span></p>
+                    </div>
+                    <button class="button button_green button_160 button_hover-next button_auto-left next-btn1">
+                        <span>Далее</span>
+                    </button>
+                </div>
             </div>
             <div class="calck-type-window">
-                <h3 class="calck-title">Выберите тип окна: </h3>
-                <div class="windows">
-                    <div class="window-select">
-                        <input class="widow-value" type="radio" name="step" id="win1" value="1000">
-                        <label for="win1">
-                            <img src="img/calck/type-windows1-2 1.svg" alt="">
+                <h3 class="calck-title">Куда необходимо установить конструкцию?</h3>
+                <ul class="windows">
+                    <li class="window-select">
+                        <input class="window-value" type="checkbox" name="step" id="win1">
+                        <label for="win1" class="window-name">
+                            <span class="boxInput"></span>
+                            <p class="label-text">Панельный дом</p>
                         </label>
-                    </div>
-                    <div class="window-select">
-                        <input class="widow-value" type="radio" name="step" id="win2" value="1500">
-                        <label for="win2">
-                            <img src="img/calck/type-windows2-2 1.svg" alt="">
+                        
+                    </li>
+                    <li class="window-select">
+                        <input class="window-value" type="checkbox" name="step" id="win2">
+                        <label for="win2" class="window-name">
+                            <span class="box-input"></span>
+                            Кирпичный дом
                         </label>
-                    </div>
-                    <div class="window-select">
-                        <input class="widow-value" type="radio" name="step" id="win3" value="800">
-                        <label for="win3">
-                            <img src="img/calck/type-windows3-2 1.svg" alt="">
+                    </li>
+                    <li class="window-select">
+                        <input class="window-value" type="checkbox" name="step" id="win3">
+                        <label for="win3" class="window-name">
+                            <span class="box-input"></span>
+                            Другое
                         </label>
+                    </li>
+                </ul>
+                <div class="calc-footer">
+                    <div class="step-info">
+                        <p class="step-info-numbers"><span class="step-info number-start">2</span> / <span class="step-info number-all">4</span></p>
                     </div>
-                    <div class="window-select">
-                        <input class="widow-value" type="radio" name="step" id="win4" value="2000">
-                        <label for="win4">
-                            <img src="img/calck/type-windows4-1 1.svg" alt="">
-                        </label>
-                    </div>
+                    <button class="button button_green button_160 button_hover-next button_auto-left next-btn2">
+                        <span>Далее</span>
+                    </button>
                 </div>
             </div>
             <div class="calck-dimensions">
-                <h3 class="calck-title">Введите размеры </h3>
-                <div class="dimensions-inputs">
-                    <input class="dimensions-windth size" type="number" name="" id="" placeholder="Введите ширину">
-                    <span>мм</span>
-                    <input class="dimensions-height size" type="number" name="" id="" placeholder="Введите высоту">
-                    <span>мм</span>
-                    <span id="test-total"></span>
-                    <b></b>
+                <h3 class="calck-title">Какие дополнительные услуги вам необходимы?</h3>
+                <ul class="dimensions-inputs">
+                    <li class="dimensions-input">
+                        <input class="dimensions-value" type="checkbox" name="step" id="dem1">
+                        <label for="dem1" class="window-name">
+                            <span class="box-input"></span>
+                            Доставка
+                        </label>
+                    </li>
+                    <li class="dimensions-input">
+                        <input class="dimensions-value" type="checkbox" name="step" id="dem2">
+                        <label for="dem2" class="window-name">
+                            <span class="box-input"></span>
+                            Монтаж
+                        </label>
+                    </li>
+                    <li class="dimensions-input">
+                        <input class="dimensions-value" type="checkbox" name="step" id="dem3">
+                        <label for="dem3" class="window-name">
+                            <span class="box-input"></span>
+                            Никаких(Самовывоз)
+                        </label>
+                    </li>
+                </ul>
+                <div class="calc-footer">
+                    <div class="step-info">
+                        <p class="step-info-numbers"><span class="step-info number-start">3</span> / <span class="step-info number-all">4</span></p>
+                    </div>
+                    <button class="button button_green button_160 button_hover-next button_auto-left next-btn3">
+                        <span>Далее</span>
+                    </button>
                 </div>
             </div>
             <div class="calck-summ">
-                <h3 class="calck-title">Ориентировочная сумма:</h3>
-                <div class="summ-total"><b>0</b> <span><i class="fas fa-ruble-sign"></i></span></div>
-                <p class="summ-descr">Точная стоимость определяется мастером</p>
+                <h3 class="calck-title">Из какого вы города?</h3>
+                <ul class="calck-summ-lists">
+                    <li class="calck-summ-list">
+                        <input class="summ-value" type="radio" name="town1" id="town1">
+                        <label for="town1" class="window-name">
+                            <span class="box-input"></span>
+                            Омск
+                        </label>
+                    </li>
+                    <li class="calck-summ-list">
+                        <input class="summ-value" type="radio" name="town2" id="town2">
+                        <label for="town2" class="window-name">
+                            <span class="box-input"></span>
+                            Томск
+                        </label>
+                    </li>
+                    <li class="calck-summ-list">
+                        <input class="summ-value" type="radio" name="town3" id="town3">
+                        <label for="town3" class="window-name">
+                            <span class="box-input"></span>
+                            Смоленск
+                        </label>
+                    </li>
+                </ul>
+                <div class="calc-footer">
+                    <div class="step-info">
+                        <p class="step-info-numbers"><span class="step-info number-start number-start_last">4</span> / <span class="step-info number-all">4</span></p>
+                    </div>
+                    <button class="button button_green button_160 button_hover-next button_auto-left next-btn4">
+                        <span>Далее</span>
+                    </button>
+                </div>
             </div>
+            <form class="calck-form">
+                <h3 class="calck-title">Заполните форму для связи с Вами</h3>
+                <div class="calck-body-form">
+                    <div class="calc-inputs">
+                        <div class="calc-input">
+                            <label for="name" class="calc-input-name">Ваше имя</label>
+                            <input type="text" name="" id="name">
+                        </div>
+                        <div class="calc-input">
+                            <label for="phone" class="calc-input-name">Телефон для связи</label>
+                            <input type="text" name="" id="phone">
+                        </div>
+                    </div>
+                    <button class="button button_green button_center button_hover-next">
+                        <span>Оформить вызов</span>
+                    </button>
+                </div>
+            </form>
         </div>
         <!-- /Калькулятор -->
         <!-- Карта -->
@@ -346,9 +430,10 @@
         </div>
     </div>
     <!-- /Modal -->
-    <script src="script/main.js" type="module"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script/jquery-3.min.js"></script>
+    <script src="script/main.js" type="module"></script>
 </body>
 
 </html>

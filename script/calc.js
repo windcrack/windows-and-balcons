@@ -1,59 +1,43 @@
 function calc(){
-    const summTotal = document.querySelector('.summ-total b');
-    // Object
-    const ojects = document.querySelectorAll('.oject-value');
-    // window
-    const windows = document.querySelectorAll('.widow-value');
-    // size
-    const size = document.querySelectorAll('.size');
-    const width = document.querySelector('.dimensions-windth');
-    const height = document.querySelector('.dimensions-height');
-    // 
-    let orientSumm, summDimensions, objectValue = 0, windowValue = 0;
-    // convert to string
-    const strToNumber = (str) => str.value ? parseInt(str.value) : 0;
-    // size input for
-    size.forEach(input => {
-        input.addEventListener('input', ()=>{
-            calcTotalDim();
-        })
-    })
-    // oject select for
-    ojects.forEach(objectSelect => {
-        objectSelect.addEventListener('click', () =>{
-            if(objectSelect.checked == true){
-                objectValue = strToNumber(objectSelect);
-            }else{
-                objectValue = 0;
-            }
-            calcTotalDim();
+    const nexBtn1 = document.querySelector('.next-btn1');
+    const nexBtn2 = document.querySelector('.next-btn2');
+    const nexBtn3 = document.querySelector('.next-btn3');
+    const nexBtn4 = document.querySelector('.next-btn4');
+    const step1 = document.querySelector('.calck-oject');
+    const step2 = document.querySelector('.calck-type-window');
+    const step3 = document.querySelector('.calck-dimensions');
+    const step4 = document.querySelector('.calck-summ');
+    const step5 = document.querySelector('.calck-form');
+    const objectValue = document.querySelectorAll('.oject-value');
+    const windowValue = document.querySelectorAll('.window-value');
+    const dimensionsValue = document.querySelectorAll('.dimensions-value');
+    const summValue = document.querySelectorAll('.summ-value');
 
+    function changeBlock(button, blockPrev, blockNext){
+        button.addEventListener('click', ()=>{
+            blockPrev.style.display = 'none';
+            blockNext.style.display = 'flex';
         })
-    })
-    // window select for
-    windows.forEach(windowSelect => {
-        parseInt(windowSelect.value);
-        windowSelect.addEventListener('click', () =>{
-            if(windowSelect.checked == true){
-                windowValue = strToNumber(windowSelect);
-            }else{
-                windowValue = 0;
-            }
-            calcTotalDim();
-
-        })
-    })
-
-    const calcTotalDim = ()=>{
-        summDimensions = (strToNumber(width) + strToNumber(height)) / 10;
-        oreientSumm();
     }
- 
-    const oreientSumm = () =>{
-        console.log(objectValue, windowValue);
-        orientSumm = objectValue + windowValue + summDimensions;
-        summTotal.textContent = orientSumm.toFixed();
+
+    function checkSelect(arrVal, button, blockPrev, blockNext){
+        arrVal.forEach(item =>{
+            item.addEventListener('input', ()=>{
+                if(item.checked === true){
+                    changeBlock(button, blockPrev, blockNext);
+                }
+            })
+        })
     }
+
+    checkSelect(objectValue, nexBtn1, step1, step2);
+    checkSelect(windowValue, nexBtn2, step2, step3);
+    checkSelect(dimensionsValue, nexBtn3, step3, step4);
+    checkSelect(summValue, nexBtn4, step4, step5);
+
+    // changeBlock(nexBtn3, step3, step4);
+    // changeBlock(nexBtn4, step4, step5);
 }
 
-export default calc;
+
+export default calc
