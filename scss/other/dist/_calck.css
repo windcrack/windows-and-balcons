@@ -329,6 +329,26 @@ input[type="checkbox"]:checked + .window-name::before, .summ-value:checked + .wi
 .calc-footer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.button-block {
+  display: flex;
+}
+
+.back-btn {
+  margin-right: 12px;
+}
+
+.block-list-select {
+  margin-bottom: 16px;
+}
+
+.block-list-items {
+  display: flex;
+  color: #fff;
+  list-style: none;
+  justify-content: space-between;
 }
 
 .step-info {
